@@ -45,7 +45,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <TrustedSection />
       <ServicesPills services={services} />
       <WhyChooseUs features={features} />
       <IndustriesSection />
@@ -55,6 +54,7 @@ export default function Home() {
       <MaximizeSection />
       <HoverSection />
       <SpecialistsSection />
+      <TrustedSection />
       <AwardsSection />
       <BeforeAfterSection />
       <ResultsSection results={results} />
