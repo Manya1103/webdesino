@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getIndustries } from "@/lib/data";
 import type { PortfolioProject } from "@/lib/data";
+import { GoalIcon } from "lucide-react";
 
 interface PortfolioProps {
   projects: PortfolioProject[];
@@ -81,7 +82,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
-                        <Target className="w-12 h-12 text-orange" />
+                        <GoalIcon className="w-12 h-12 text-orange" />
                       </div>
                     )}
                   </div>

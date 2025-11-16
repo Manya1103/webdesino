@@ -1,7 +1,7 @@
 
 
 import type { Feature } from "@/lib/data";
-import { Target } from "lucide-react";
+import { GoalIcon, Target } from "lucide-react";
 
 interface WhyChooseUsProps {
   features: Feature[];
@@ -46,7 +46,7 @@ export default function WhyChooseUs({ features }: WhyChooseUsProps) {
               {/* Placeholder for 3D graphic - replace with actual 3D element or iframe */}
               <div className="w-48 h-48 bg-gradient-to-br from-orange to-teal rounded-full opacity-30 animate-pulse" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <Target className="text-6xl text-white" />
+                <GoalIcon className="text-6xl text-white" />
               </div>
             </div>
           </div>

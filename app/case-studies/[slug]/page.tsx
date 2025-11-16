@@ -13,7 +13,8 @@ import {
   Users,
   Award,
   ExternalLink,
-  Quote
+  Quote,
+  GoalIcon
 } from 'lucide-react';
 
 // Generate static params for all case studies
@@ -119,7 +120,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               <p className="text-3xl font-bold gradient-text-orange">{caseStudy.heroMetrics.revenue}</p>
             </div>
             <div className="glass-strong rounded-3xl p-8 hover-lift transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <Target className="w-12 h-12 text-teal mb-4" />
+              <GoalIcon className="w-12 h-12 text-teal mb-4" />
               <p className="text-sm text-gray-600 mb-2 font-medium">ROI Achieved</p>
               <p className="text-3xl font-bold gradient-text-teal">{caseStudy.heroMetrics.roi}</p>
             </div>

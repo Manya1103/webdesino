@@ -2,6 +2,7 @@ import { getPortfolioProjects, getIndustries } from "@/lib/data";
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { Goal, GoalIcon } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Portfolio - Web Development Projects | Webdesino",
@@ -52,7 +53,7 @@ export default function PortfolioPage() {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <Target className="w-12 h-12 text-orange" />
+                      <GoalIcon className="w-12 h-12 text-orange" />
                     </div>
                   )}
                   <div className="absolute top-4 left-4 bg-teal text-white px-3 py-1 rounded-full text-xs font-semibold">
