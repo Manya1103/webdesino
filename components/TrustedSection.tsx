@@ -11,7 +11,7 @@ const stats = [
 ];
 
 const certifications = [
-  { name: "Google Certified Partner Delhi NCR", logo: "/google.jpg", link: "https://www.google.com/partners/" },
+  { name: "Google Certified Partner Delhi NCR", logo: "🔍", link: "https://www.google.com/partners/" },
   { name: "WordPress Certified Agency Delhi NCR", logo: "⚡", link: "https://wordpress.org/" },
   { name: "Shopify Partner Web Development Delhi NCR", logo: "🛍️", link: "https://www.shopify.com/partners" },
   { name: "SEMRush Certified Digital Marketing Delhi NCR", logo: "📊", link: "https://www.semrush.com/" },
