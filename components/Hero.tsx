@@ -188,20 +188,22 @@ export default function Hero() {
 												<p className="text-xs text-gray-500 mb-1 sm:mb-2">
 													{brand.category}
 												</p>
-												{brand.sales && (
-													<div className="flex items-center gap-1">
-														<span className="text-xs font-semibold text-orange">
-															💰 {brand.sales}
-														</span>
-													</div>
-												)}
-												{brand.achievement && (
-													<div className="flex items-center gap-1">
-														<span className="text-xs font-semibold text-teal">
-															⭐ {brand.achievement}
-														</span>
-													</div>
-												)}
+													{brand.sales && (
+														<div className="flex items-center gap-1">
+															<BarChart className="w-3 h-3 text-orange" />
+															<span className="text-xs font-semibold text-orange">
+																{brand.sales}
+															</span>
+														</div>
+													)}
+													{brand.achievement && (
+														<div className="flex items-center gap-1">
+															<Award className="w-3 h-3 text-teal" />
+															<span className="text-xs font-semibold text-teal">
+																{brand.achievement}
+															</span>
+														</div>
+													)}
 											</div>
 											<div className="w-2 h-2 bg-gradient-orange rounded-full animate-pulse-glow flex-shrink-0 mt-1" />
 										</div>

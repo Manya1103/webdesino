@@ -52,7 +52,7 @@ export default function PortfolioPage() {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-4xl">🎯</div>
+                      <Target className="w-12 h-12 text-orange" />
                     </div>
                   )}
                   <div className="absolute top-4 left-4 bg-teal text-white px-3 py-1 rounded-full text-xs font-semibold">

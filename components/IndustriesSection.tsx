@@ -6,7 +6,6 @@ import { Building, Briefcase, GraduationCap, ShoppingCart, Rocket, Building2, Sh
 const industries = [
   {
     icon: Building,
-    emoji: "🏡",
     title: "Real Estate",
     description: "High-performance real estate websites with property listings, lead forms, and SEO-ready structures.",
     example: "Land Sathi",
@@ -14,7 +13,6 @@ const industries = [
   },
   {
     icon: Briefcase,
-    emoji: "📢",
     title: "Agencies & Startups",
     description: "Conversion-focused websites for startups and agencies to build credibility and attract clients.",
     example: "Ambassador Perk",
@@ -22,7 +20,6 @@ const industries = [
   },
   {
     icon: GraduationCap,
-    emoji: "🎓",
     title: "Education & Training",
     description: "Online learning platforms and coaching institute websites with student-friendly navigation.",
     example: "ProSkills Hub",
@@ -30,7 +27,6 @@ const industries = [
   },
   {
     icon: Building,
-    emoji: "🏥",
     title: "Healthcare & Clinics",
     description: "Trusted healthcare websites for hospitals, clinics, and medical suppliers with appointment booking.",
     example: "Mentok Healthcare",
@@ -38,7 +34,6 @@ const industries = [
   },
   {
     icon: ShoppingCart,
-    emoji: "🛍️",
     title: "Ecommerce & Retail",
     description: "Ecommerce websites with integrated payments, modern UI, and optimized product catalogs.",
     example: "Buy Khari Bauli",
@@ -46,7 +41,6 @@ const industries = [
   },
   {
     icon: Rocket,
-    emoji: "🚀",
     title: "Small Businesses",
     description: "Affordable, professional websites for SMEs and local businesses to boost online presence.",
     example: "Book Buzzz",
@@ -54,7 +48,6 @@ const industries = [
   },
   {
     icon: Building2,
-    emoji: "💼",
     title: "Corporate & SaaS",
     description: "Corporate and SaaS websites with clean UI, secure integrations, and lead generation systems.",
     example: "CS Hub",
@@ -62,7 +55,6 @@ const industries = [
   },
   {
     icon: Shirt,
-    emoji: "👗",
     title: "Fashion & Lifestyle",
     description: "Stylish, modern websites for fashion, lifestyle, and wellness brands with ecommerce features.",
     example: "Nourish Mantra",
@@ -70,7 +62,6 @@ const industries = [
   },
   {
     icon: Globe,
-    emoji: "🌐",
     title: "Freelance & Talent Platforms",
     description: "Dynamic platforms for talent acquisition, freelance gigs, and creative marketplaces.",
     example: "Site Karo",
@@ -107,9 +98,8 @@ export default function IndustriesSection() {
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 {/* Icon */}
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="text-4xl">{industry.emoji}</div>
-                  <Icon className="text-teal opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
+                <div className="flex items-center gap-4 mb-4">
+                  <Icon className="text-teal group-hover:text-orange transition-colors duration-300" size={40} />
                 </div>
 
                 {/* Content */}

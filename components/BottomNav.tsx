@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Home, ChevronDown, Menu, X } from "lucide-react";
+import { Home, ChevronDown, Menu, X, GraduationCap, BookOpen, Pill, ShoppingBag } from "lucide-react";
 
 // Services dropdown content
 const servicesDropdown = {
@@ -46,10 +46,10 @@ const servicesDropdown = {
 
 // Work dropdown content
 const workDropdown = [
-  { emoji: "📚", name: "BookBuzzz", href: "/case-studies/bookbuzzz" },
-  { emoji: "💊", name: "LuckyNutra", href: "/case-studies/luckynutra" },
-  { emoji: "🥜", name: "BuyKhariBauli", href: "/case-studies/buykharibauli" },
-  { emoji: "🎓", name: "Meritshot", href: "/case-studies/meritshot" },
+  { icon: <BookOpen className="w-4 h-4" />, name: "BookBuzzz", href: "/case-studies/bookbuzzz" },
+  { icon: <Pill className="w-4 h-4" />, name: "LuckyNutra", href: "/case-studies/luckynutra" },
+  { icon: <ShoppingBag className="w-4 h-4" />, name: "BuyKhariBauli", href: "/case-studies/buykharibauli" },
+  { icon: <GraduationCap className="w-4 h-4" />, name: "Meritshot", href: "/case-studies/meritshot" },
 ];
 
 const navItems = [
@@ -136,8 +136,8 @@ export default function BottomNav() {
                             href={project.href}
                             className="flex items-center gap-3 text-gray-700 hover:text-teal hover:bg-gray-50 transition-all text-sm p-2 rounded-lg group"
                           >
-                            <span className="text-xl group-hover:scale-110 transition-transform">
-                              {project.emoji}
+                            <span className="text-teal group-hover:scale-110 transition-transform">
+                              {project.icon}
                             </span>
                             <span className="font-medium">{project.name}</span>
                           </Link>
@@ -235,7 +235,7 @@ export default function BottomNav() {
                           className="flex items-center gap-3 text-gray-700 hover:text-orange transition-all text-sm p-2 rounded-lg"
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          <span className="text-xl">{project.emoji}</span>
+                          <span className="text-orange">{project.icon}</span>
                           <span className="font-medium">{project.name}</span>
                         </Link>
                       ))}

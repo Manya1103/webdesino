@@ -2,15 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, TrendingUp, Award, Zap, Rocket, Star, Trophy } from "lucide-react";
 
-// Trusted Certifications & Platforms
-const certificationBadges = [
-  { name: "Google Partner", icon: "🔍", description: "Certified Partner Delhi NCR" },
-  { name: "WordPress", icon: "⚡", description: "Certified Agency Delhi NCR" },
-  { name: "Shopify Partner", icon: "🛒", description: "Web Development Delhi NCR" },
-  { name: "SEMRush", icon: "📊", description: "Certified Digital Marketing" },
-  { name: "DesignRush", icon: "🏆", description: "Accredited Web Company" },
+const certifications = [
+  { name: "Google Partner", icon: <TrendingUp className="w-6 h-6" />, description: "Certified Partner Delhi NCR" },
+  { name: "WordPress", icon: <Zap className="w-6 h-6" />, description: "Certified Agency Delhi NCR" },
+  { name: "Shopify", icon: <Rocket className="w-6 h-6" />, description: "Partner Web Development" },
+  { name: "SEMRush", icon: <TrendingUp className="w-6 h-6" />, description: "Certified Digital Marketing" },
+  { name: "DesignRush", icon: <Trophy className="w-6 h-6" />, description: "Accredited Web Company" },
 ];
 
 export default function MaximizeSection() {
@@ -27,7 +26,10 @@ export default function MaximizeSection() {
           {/* Main Heading with Animated Gradient Text */}
           <div className="mb-12 text-center lg:text-left">
             <div className="inline-block px-4 py-2 bg-orange/10 rounded-full mb-6 animate-fade-in">
-              <span className="text-sm font-bold text-orange uppercase tracking-wide">🚀 Why WebDesino Ranks #1 in Delhi NCR</span>
+              <span className="text-sm font-bold text-orange uppercase tracking-wide flex items-center gap-2">
+                <Rocket className="w-4 h-4" />
+                Why WebDesino Ranks #1 in Delhi NCR
+              </span>
             </div>
             <h2 className="text-3xl lg:text-5xl xl:text-6xl font-bold mb-6">
               <span className="block text-teal animate-slide-in-left" style={{ animationDelay: '0.1s' }}>
@@ -80,19 +82,19 @@ export default function MaximizeSection() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
-              {certificationBadges.map((cert, idx) => (
+              {certifications.map((cert, idx) => (
                 <a
                   key={idx}
                   href={cert.name === "Google Partner" ? "https://www.google.com/partners/" : 
                         cert.name === "WordPress" ? "https://wordpress.org/" :
-                        cert.name === "Shopify Partner" ? "https://www.shopify.com/partners" :
+                        cert.name === "Shopify" ? "https://www.shopify.com/partners" :
                         cert.name === "SEMRush" ? "https://www.semrush.com/" :
                         "https://www.designrush.com/"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-strong rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover-lift group text-center border border-white/20"
                 >
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{cert.icon}</div>
+                  <div className="text-orange mb-3 group-hover:scale-110 transition-transform flex justify-center">{cert.icon}</div>
                   <div className="font-bold text-teal text-sm mb-1 group-hover:text-orange transition-colors">{cert.name}</div>
                   <div className="text-xs text-gray-600">{cert.description}</div>
                 </a>
@@ -104,21 +106,21 @@ export default function MaximizeSection() {
               <p className="text-sm text-gray-600 mb-3">Recognized for professional work and high-quality digital solutions</p>
               <div className="flex flex-wrap justify-center gap-6">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">⭐</span>
+                  <Star className="w-8 h-8 text-orange" />
                   <div>
                     <div className="font-bold text-orange">4.9/5</div>
                     <div className="text-xs text-gray-600">Client Rating</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">🏆</span>
+                  <Trophy className="w-8 h-8 text-orange" />
                   <div>
                     <div className="font-bold text-teal">10+</div>
                     <div className="text-xs text-gray-600">Certifications</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">🚀</span>
+                  <Rocket className="w-8 h-8 text-orange" />
                   <div>
                     <div className="font-bold text-orange">100%</div>
                     <div className="text-xs text-gray-600">Success Rate</div>
