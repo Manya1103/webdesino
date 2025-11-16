@@ -9,7 +9,7 @@ export default function NotFound() {
           Project Not Found
         </h1>
         <p className="text-xl text-gray-700 mb-8">
-          The portfolio project you're looking for doesn't exist.
+          The portfolio project you're looking for doesn't exist. 
         </p>
         <Link
           href="/portfolio"
