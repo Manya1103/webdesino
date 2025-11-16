@@ -41,13 +41,9 @@ export default function ServicesPills({ services }: ServicesPillsProps) {
           </div>
         </div>
 
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4 animate-scale-in">
-          <span className="gradient-text">Our Success Stories</span>
+        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6 animate-scale-in" style={{ animationDelay: '0.2s' }}>
+          <span className="gradient-text">What do you want to achieve?</span>
         </h2>
-        
-        <p className="text-center text-gray-600 text-lg mb-12 lg:mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          What do you want to achieve?
-        </p>
 
         <div className="space-y-3 max-w-5xl mx-auto">
           {services.map((service, idx) => (
@@ -59,7 +55,7 @@ export default function ServicesPills({ services }: ServicesPillsProps) {
               aria-label={`${service.title} - Web Development Services Delhi`}
             >
               {/* Animated background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-r from-orange via-orange/80 to-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-teal via-teal/80 to-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <span className="text-lg lg:text-xl font-semibold relative z-10">{service.title}</span>
               <ArrowRight

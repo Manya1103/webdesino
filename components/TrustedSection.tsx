@@ -1,8 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import NextImage from "next/image";
 import { Award, Users, Briefcase, Shield } from "lucide-react";
 import React from 'react';
+import Google from "@/public/google.jpg";
+import WordPress from "@/public/wordpress.jpg";
+import Shopify from "@/public/shopify.jpg";
+import SEMRush from "@/public/semrush.png";
+import DesignRush from "@/public/designrush.jpg";
 
 const stats = [
   { icon: Users, label: "Happy Clients", value: "50+" },
@@ -11,11 +17,11 @@ const stats = [
 ];
 
 const certifications = [
-  { name: "Google Certified Partner Delhi NCR", logo: "🔍", link: "https://www.google.com/partners/" },
-  { name: "WordPress Certified Agency Delhi NCR", logo: "⚡", link: "https://wordpress.org/" },
-  { name: "Shopify Partner Web Development Delhi NCR", logo: "🛍️", link: "https://www.shopify.com/partners" },
-  { name: "SEMRush Certified Digital Marketing Delhi NCR", logo: "📊", link: "https://www.semrush.com/" },
-  { name: "DesignRush Accredited Web Development Company Delhi NCR", logo: "🏆", link: "https://designrush.com/" },
+  { name: "Google Certified Partner Delhi NCR", logo: Google, link: "https://www.google.com/partners/" },
+  { name: "WordPress Certified Agency Delhi NCR", logo: WordPress, link: "https://wordpress.org/" },
+  { name: "Shopify Partner Web Development Delhi NCR", logo: Shopify, link: "https://www.shopify.com/partners" },
+  { name: "SEMRush Certified Digital Marketing Delhi NCR", logo: SEMRush, link: "https://www.semrush.com/" },
+  { name: "DesignRush Accredited Web Development Company Delhi NCR", logo: DesignRush, link: "https://designrush.com/" },
 ];
 
 const logos = [
@@ -85,19 +91,25 @@ export default function TrustedSection() {
 
         {/* Certifications */}
         <div className="max-w-5xl mx-auto">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 mb-8">
             {certifications.map((cert, idx) => (
               <Link
                 key={idx}
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-6 rounded-2xl glass hover:glass-strong text-center transition-all duration-300 hover-lift animate-fade-in"
+                className="group p-4 sm:p-6 rounded-2xl glass hover:glass-strong text-center transition-all duration-300 hover-lift animate-fade-in"
                 style={{ animationDelay: `${idx * 0.1 + 0.5}s` }}
                 aria-label={cert.name}
               >
-                <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">
-                  {cert.logo}
+                <div className="mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <NextImage
+                    src={cert.logo}
+                    alt={cert.name}
+                    width={100}
+                    height={100}
+                    className="w-full h-auto object-contain max-w-[60px] sm:max-w-[70px] md:max-w-[80px] mx-auto"
+                  />
                 </div>
                 <div className="text-xs text-gray-600 group-hover:text-teal transition-colors font-medium">
                   {cert.name.replace(" Delhi NCR", "")}
@@ -121,7 +133,7 @@ export default function TrustedSection() {
         <div className="bg-gray-50 dark:bg-gray-800 py-12 md:py-20">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-8">
-              Trusted by Companies Worldwide
+              Trusted by leading brands
             </h2>
             <div className="relative overflow-hidden">
               <div className="flex animate-infinite-scroll">
